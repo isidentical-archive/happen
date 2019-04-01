@@ -1,0 +1,14 @@
+dist: xenial
+language: python
+python: 3.7
+install:
+- pip install pipenv
+- pipenv install pytest --dev
+- pipenv run python setup.py install
+- pipenv run python -m pytest
+script: python -m pytest
+deploy:
+  provider: pypi
+  user: BTaskaya
+  password: 
+    secure: dcwasWrRM4aW1o4lbhcdQ6LaRYcvWjbsQ6/+y/3Jf+mIjTMLVPK8kfrqGYFCjHAMSqgJj6q9lIh50vxzaeXPXalUSaLo49y6feCEyT/b+Yzz6x5F9wgqrZWxzmti+aWhwhW+ToDBYoCu+/sXf3xW9kbJFrl9ABuFYb7kYZ68rIdvXuDRh6/bn8titt4kEQCiwZ30kNwVKfcyjniPquFbeHbF5EjbfHZ1wulqzU79aHnpbITXuZqtxTqWqIKRWoS1nTkzdmqgL9TukuHPm3HCLzTMIKypR0JA/oEhcZYoC9LqEjP7vGEBxpHsZ14wKBhbGzLd15bA+m8RgfN6UMRG8SMTfQEk8bUEP6AwQ5dYumdOr4LTQKNmwx97mea27t5Pu805ERBgVzC84YuewWD312DfI3o9BYH6aY1cBG23qR/LzRuxGbQnsdv01dFvVaucNYyYc4NV5i2utIU/sZEjlU2+CLRajc4fNzsDQvvFL48mPsTICkx//rSX7RuSVujd3kNIn25JxFCIydbYVJCn8cSAVISNLg+GBgHRD9G2uoFV790JRCKNb60NVXAZ/dy/eeYklHErwvwhWzzVP9HXVED32isMCYhWGs9z6S1W9W9UfE4Ung4yQu0WMZYEy1DGTBsAPpuQXtJ8sxQebCC76iyQ9qN5rYb4Clr4nbfcll0=
